@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import "./globals.css";
+import ITMakeoversNav from "@/components/ITMakeoversNav";
 
-const inter = Inter({ subsets: ["latin"] });
+//create lato font
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -9,9 +14,32 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const links = [
+    {
+      name: "Wykształcenie",
+      link: "#poznaj",
+    },
+    {
+      name: "Doświadczenie",
+      link: "#korzysci",
+    },
+    {
+      name: "Projekty",
+      link: "/#mapa-inwestycji",
+    },
+    {
+      name: "O mnie",
+      link: "#o-nas",
+    },
+    
+  ];
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={lato.className}>
+        <ITMakeoversNav links={links} />
+        {children}
+      </body>
     </html>
   );
 }
