@@ -44,7 +44,7 @@ const Header = () => {
           />
         </svg>
 
-        <div className="flex md:flex-row flex-col items-center justify-center w-4/5 mx-auto">
+        <div className="flex md:flex-row flex-col items-center justify-center mx-5 md:w-4/5 md:mx-auto">
           <Image
             src="/me.jpg"
             alt="Moje zdjęcie"
@@ -52,11 +52,12 @@ const Header = () => {
             width={1524}
             height={1524}
           />
-          <div className="">
+          <div className="pt-5 md:pt-0">
             <span className="uppercase text-5xl">Cześć,</span>
-            <h1 className="text-3xl md:text-6xl font-bold">
-              Jestem{" "}
-              <span className="text-[#fca311]">
+            <h1 className="text-3xl md:text-6xl font-bold md:text-nowrap">
+              Jestem{" "} 
+              <span className="text-[#fca311]  ">
+              {/* block h-5 */}
                 <TypeWriter
                   text={["Paweł Mroczek", "Frontend Developerem"]}
                   delay={150}
@@ -64,7 +65,7 @@ const Header = () => {
               </span>
             </h1>
             <div className="absolute left-0 z-[-100] hidden md:block"></div>
-            <p className="text-2xl w-3/4 mt-10 mb-12">
+            <p className="text-2xl md:w-3/4 mt-10 mb-12">
               👨🏻‍💻 Jestem{" "}
               <span className="text-[#fca311] font-semibold">
                 Frontend Developerem
